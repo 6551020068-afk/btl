@@ -125,6 +125,7 @@ class listMuontra {
    public:
     void muonSach(string madg, nodesach* a);
     void traSach(string madg, nodesach* a);
+    bool kiemtraSachDangMuonID(string masach);
 };
 void listMuontra::muonSach(string madg, nodesach* a) {
     if (a == NULL) {
@@ -155,9 +156,18 @@ void listMuontra::traSach(string madg, nodesach* a) {
     }
     cout << "Khong tim thay sach da muon";
 }
+bool listMuontra ::kiemtraSachDangMuonID(string masach){
+    for (auto& mt:dsmt){
+        if(mt.masach == masach && mt.trangthai== "Dang muon"){
+            return true ;
+        }
+    }
+    return false;
+}   
 int main(){
 
 };
+
 
 
 
